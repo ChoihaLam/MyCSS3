@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<style>
+			.button{
+				margin:100px;
+				width:200px;
+				height:100px;
+				background:#f1f1f1;
+				box-shadow:5px 5px ;
+				font-size:30px;
+				line-height:100px;
+				text-align:center;
+			}
+			/*div.button:hover{
+				box-shadow:5px 5px inset;
+			}*/
+			/*.button-inset{
+				margin:100px;
+				width:200px;
+				height:100px;
+				background:#f1f1f1;
+				box-shadow:5px 5px 1px inset;
+			}*/
+			
+			
+		</style>
+	</head>
+	<body>
+		<div class="button">
+			确定
+		</div>
+		<!-- <div class="button-inset">
+		按钮点击效果
+		</div>-->
+		<script>
+			//选中页面中的元素
+			var button = document.getElementsByTagName('div')[0];
+			//注册事件(按下鼠标事件)
+			button.onmousedown = function(){
+				//修改阴影效果
+				this.style.boxShadow = '5px 5px inset';
+				//修改文字效果
+				this.style.lineHeight = '90px';
+			}
+			//注册事件（松开鼠标事件）
+			button.onmouseup = function(){
+				this.style.boxShadow = '5px 5px';
+				//修改文字效果
+				this.style.lineHeight = '100px';
+			}
+			//注册事件（鼠标移出事件）
+			button.onmouseout = function(){
+				this.style.boxShadow = '5px 5px';
+				//修改文字效果
+				this.style.lineHeight = '100px';
+			}
+			
+		</script>
+	</body>
+</html>

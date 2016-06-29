@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<style>
+			#div1{
+				width:200px;
+				height:100px;
+				border:2px dashed red; /*dashed虚线*/
+				padding:10px;
+				margin:20px;
+				border-radius:30px/15px; 
+				/*圆角边框 设定一个参数会同时设定四个角的圆角程度*/
+				/*如果圆角的半径相同，每个值可以只写一个参数，相当于写2个一样的参数
+				例如30px/30px和30px是等同的;
+				30px(四个角的水平半径)/15px(四个角的垂直半径)；
+				border-radius:20px/20px 40px; 第一个20px表示四个角水平的半径；20px左上和右下的垂直半径，40px代表右上和左下的垂直半径
+				*/
+			}
+			#div2{
+				width:180px;
+				height:80px;
+				border:2px dashed red; /*dashed虚线*/
+				padding:10px;
+				margin:20px;
+				border-radius:20px/20px 40px 80px 100px;
+				/*
+					20px 代表左上角的垂直半径
+					40px 代表右上角的垂直半径
+					80px 代表右下角的垂直半径
+					100px 代表左下角的垂直半径
+
+					border-radius:20px 40px 80px 100px/20px 40px 80px 100px
+					如果提供四个参数，则按上左、下右、下右、下左的顺序作用于四个角。
+					如果提供一个，将用于全部的四个角
+					如果提供两个，第一个用于上左、下右，第二个用于上右、下左
+					如果提供三个，第一个用于上左，第二个用于上右、下左，第三个用于下右
+				*/
+			}
+		</style>
+	</head>
+	<body>
+		<div id="div1">
+			圆角属性设定方法----普通边框
+		</div>
+		<div id="div2">
+		</div>
+	</body>
+</html>

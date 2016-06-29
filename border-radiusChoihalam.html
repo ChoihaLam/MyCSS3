@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<style>
+			#banyuan{
+				width:96px;
+				height:48px;
+				border-top:2px solid red;
+				border-right:2px solid red;
+				border-bottom:50px solid red;
+				border-left:2px solid red;
+				border-radius:100px;
+				margin-bottom:50px;
+			}
+			#taiji{
+				width:100px;
+				height:50px;
+				border-top:2px solid red;
+				border-right:2px solid red;
+				border-bottom:50px solid red;
+				border-left:2px solid red;
+				border-radius:100px;
+				position:relative; /*设置伪对象的参照物*/
+			}
+			#taiji::after{
+				content:'';
+				width:10px;
+				height:10px;
+				border:20px solid red;
+				position:absolute;
+				left:0px;
+				top:25px;
+				border-radius:50px;
+				background:#fff;
+			}
+			#taiji::before{
+				content:'';
+				width:10px;
+				height:10px;
+				border:20px solid #fff;
+				position:absolute;
+				right:0px;
+				top:25px;
+				border-radius:50px;
+				background:red;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="banyuan">	
+		</div>
+		<div id="taiji">
+		</div>
+	</body>
+</html>
